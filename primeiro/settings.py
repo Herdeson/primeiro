@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': True, #Django procura por subdiretorios templates dentro de cada pacote
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
