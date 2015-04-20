@@ -17,6 +17,8 @@ from .models import Question
 #    output = ', '.join([p.question_text for p in latest_question_list])
 #    return HttpResponse(output)
 
+def teste(request):
+    return render(request,'polls/test.html')
 
 
 def index(request):
