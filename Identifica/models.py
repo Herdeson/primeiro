@@ -25,14 +25,14 @@ class Controle(models.Model):
         abstract = True
 
 class Individuo(Controle):
-	foto = models.ImageField(blank=True, null=True)
-	nome = models.CharField(max_length=200)
-	alcunha = models.CharField(max_length=100)
-	sexo = models.CharField(max_length=1, choices = SEXO )
-	natural =  models.CharField(max_length=200)
-
-	def __str__(self):
-		return self.nome
+    foto = models.ImageField(blank=True, null=True)
+    nome = models.CharField(max_length=200)
+    alcunha = models.CharField(max_length=100)
+    sexo = models.CharField(max_length=1, choices = SEXO )
+    natural =  models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.nome
 
 
 
