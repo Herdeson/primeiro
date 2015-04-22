@@ -2,13 +2,19 @@
 {% block conteudo %}
 
 {% if object_list %}
-    <ul>
+    <div class="row">
     {% for individuo in object_list %}
-        <li>
-          <a href="">{{ individuo.nome }}</a>
-        </li>
+    
+    
+        <div class="col-lg-4">
+        <img src="{{individuo.foto.url}}" class="img-rounded" alt={{individuo.id}}>
+        <p>
+          <p>{{individuo.foto.name}}</p>
+        </div>
+    
     {% endfor %}
-    </ul>
+     </div>
+    
 {% else %}
     <p>Não há Individuos Cadastrados</p>
 {% endif %}
