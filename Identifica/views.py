@@ -15,4 +15,7 @@ def teste(request):
 class IndexView(ListView):
     model = Individuo
     template_name = 'Identifica/index.html'
-    #context_object_name = 'individuo_list'
+
+    def get_queryset(self):
+    	return Individuo.objects.order_by('-dataModificacao')
+

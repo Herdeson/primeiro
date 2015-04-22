@@ -4,13 +4,15 @@
 {% if object_list %}
     <div class="row">
     {% for individuo in object_list %}
-    
-    
-        <div class="col-lg-4">
-        <img src="{{individuo.foto.url}}" class="img-rounded" alt={{individuo.id}}>
+       <div class="col-md-4  col-lg-4 col-sm-4">
+       	{% if individuo.foto %}
+        <img src="{{individuo.foto.url}}" class="img-responsive" alt={{individuo.id}} style="width: 200px; height: 200px;">
+        {% endif %}
         <p>
-          <p>{{individuo.foto.name}}</p>
-        </div>
+          <p>{{individuo.nome}}</p>
+       </div>
+    
+     
     
     {% endfor %}
      </div>
