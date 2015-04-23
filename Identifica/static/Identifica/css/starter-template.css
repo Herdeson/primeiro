@@ -1,14 +1,7 @@
 body {
   padding-top: 50px;
 }
-.conteudo .col-lg-4 {
-  margin-bottom: 20px;
+.starter-template {
+  padding: 40px 15px;
   text-align: center;
-}
-.conteudo h2 {
-  font-weight: normal;
-}
-.conteudo .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
 }

@@ -2,7 +2,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import RequestContext, loader
-from django.views.generic import ListView
+from django.views.generic import ListView 
+from django.views.generic.edit import CreateView
+#from django.core.urlresolvers import reverse
 
 from .models import Individuo
 
@@ -18,4 +20,11 @@ class IndexView(ListView):
 
     def get_queryset(self):
     	return Individuo.objects.order_by('-dataModificacao')
+
+class IndividuoCreate(CreateView):
+	model = Individuo
+	fields = ['nome' , 'alcunha', 'sexo' , 'natural' , 'foto' , 'status']
+	success_url = "/identifica/"
+#	success_url = reverse('indetifica:index')
+
 
