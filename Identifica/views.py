@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView
 
 from .models import Individuo
 
+
 # Create your views here.
 
 

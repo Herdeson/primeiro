@@ -2,12 +2,12 @@
 {% load staticfiles %}
 {% block conteudo %}
 
-<form class="form-horizontal" action="" method="post">{% csrf_token %}
+<form class="post-form" enctype="multipart/form-data"  action="" method="post">{% csrf_token %}
     
     {{ form.as_p }}
 
 
-   	<div class="form-group">
+   	<div class="form-group" >
      <div class="col-lg-10 col-lg-offset-2">
        <button type="submit" class="btn btn-primary">Submit</button>
      </div>
